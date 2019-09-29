@@ -1,0 +1,16 @@
+# main links links
+main:
+  - title: "Publications"
+    url: /papers/
+
+  - title: "Projects"
+    url: /projects/    
+
+  - title: "Teaching"
+    url: /teaching/    
+    
+  - title: "Code & Data"
+    url: /code/
+        
+  - title: "Contact"
+    url: /contact/

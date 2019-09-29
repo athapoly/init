@@ -1,0 +1,48 @@
+---
+title: "Contact"
+permalink: /contact/
+author_profile: true
+---
+
+ <p><b>Address:</b></p>
+          University of Innsbruck <br>
+	  Department of Computer Science <br>
+	  Office: 3N07 <br>
+	  Technikerstr. 21a <br>
+	  6020 Innsbruck <br>
+          Austria <br>
+          <br>
+          <b>Phone:</b>  +43 512 507 53390  <br>
+          <b>E-mail:</b>  athanasios.polydoros@uibk.ac.at<br>
+          <b>Skype:</b>  athanasios.polydoros
+       
+<script>
+      function initMap() {
+       var myLatLng = {lat: 47.263213, lng:11.3434153};
+       var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: myLatLng
+        });
+        var infowindow = new google.maps.InfoWindow();
+        var service = new google.maps.places.PlacesService(map);
+
+        service.getDetails({
+          placeId: ''
+        }, function(place, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            var marker = new google.maps.Marker({
+              map: map,
+              position: place.geometry.location
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+              infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + 
+                place.formatted_address + '</div>');
+              infowindow.open(map, this);
+            });
+          }
+        });
+      }
+    </script>
+   <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxx6fzgGroA14PcR92LGB45uQ30ci2L2c&libraries=places&callback=initMap">">
+    </script>

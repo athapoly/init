@@ -1,0 +1,18 @@
+---
+permalink: /papers/
+title: "Publications"
+---
+<div class="pure-g-r" id="layout">
+<div class="pure-u-1-2">
+      <div class="l-right">
+	<p>  <b>Sort</b>:
+	  <a class="pure-button" href="{{site.baseurl}}/papers_byyear/index.html">By Year</a>	  
+      </p>
+      </div>
+</div>
+<div class="pure-u-1">
+{% bibliography %}
+Total number of research items: {% bibliography_count -f bibliography %}
+</div>
+
+</div>
